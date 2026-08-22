@@ -126,20 +126,9 @@
   /* ---------------- hero parallax ---------------- */
   if (!reduceMotion) {
     gsap.to('#heroImg', {
-      scale: 1,
-      y: 60,
+      y: 28,
       ease: 'none',
       scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
-    });
-  }
-
-  /* ---------------- specialty / about media parallax ---------------- */
-  if (!reduceMotion) {
-    gsap.utils.toArray('.about-media img, .menu-cat-media img').forEach(function (img) {
-      gsap.fromTo(img, { y: -20 }, {
-        y: 20, ease: 'none',
-        scrollTrigger: { trigger: img, start: 'top bottom', end: 'bottom top', scrub: true }
-      });
     });
   }
 
