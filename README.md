@@ -24,29 +24,18 @@ legal/cookies.html       política de cookies
 - Google Fonts: Archivo Black (titulares), Inter (texto), Space Grotesk (detalles/mono).
 - Sin frameworks JS, sin paso de build.
 
-## Fotos pendientes
+## Fotos
 
-Todas las imágenes son **placeholders bien marcados** (fondo oscuro + icono de cámara + texto "FOTO PENDIENTE") dentro de `img/`. Para sustituir una foto real, guarda el archivo **con el mismo nombre** que el placeholder (o cambia el `src` en `index.html`):
+La mayoría de las fotos son ya reales (del local y de los platos), optimizadas en `.webp` dentro de `img/`. Los originales sin procesar quedan guardados en `img/fotos-originales/` por si hacen falta en otro tamaño o formato.
 
-| Archivo | Qué foto va ahí |
+Todavía quedan **2 placeholders** (fondo oscuro + icono de cámara + texto "FOTO PENDIENTE") porque no había foto real disponible para esos platos:
+
+| Archivo | Qué foto falta |
 |---|---|
-| `img/hero-local-neon-noche.svg` | Fachada o interior de noche con neón (hero a pantalla completa) |
-| `img/especialidad-big-burger-bro.svg` | Big Burger BRO |
-| `img/especialidad-bowl-asian.svg` | Bowl asian fusion |
-| `img/especialidad-bao.svg` | Bao |
-| `img/especialidad-wok.svg` | Wok de noodles |
-| `img/carta-starters.svg` | Starters & alitas |
-| `img/carta-burgers.svg` | Burgers |
-| `img/carta-wraps.svg` | Wraps & kebab rolls |
-| `img/carta-bowls.svg` | Bowls & wok |
-| `img/carta-curries.svg` | Curries & rice |
-| `img/carta-bao.svg` | Bao (categoría carta) |
-| `img/carta-postres.svg` | Postres |
-| `img/nosotros-local.svg` | Interior/terraza del local |
-| `img/galeria-1.svg` … `img/galeria-6.svg` | Fotos variadas de platos y local |
-| `img/og-image.jpg` | Imagen para compartir en redes (1200×630, formato JPG/PNG real) |
+| `img/carta-burgers.svg` | Una burger de la carta (ninguna de las fotos recibidas mostraba burgers) |
+| `img/carta-wraps.svg` | Un kebab roll o wrap de la carta |
 
-Recomendado: exportar las fotos reales en `.jpg` o `.webp`, optimizadas (~150–300 KB), y actualizar el `src` correspondiente en `index.html`.
+Para sustituirlas, guarda la foto real con el **mismo nombre de archivo** (cambiando `.svg` por `.webp`/`.jpg`) y actualiza el `src` correspondiente en `index.html`.
 
 ## Enlaces a revisar antes de publicar
 

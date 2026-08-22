@@ -11,9 +11,9 @@
   --white: #f5f4f2;
   --grey: #9a9a9d;
   --grey-dim: #6a6a6d;
-  --accent: #ff2a3c;
-  --accent-2: #ff5a3c;
-  --accent-glow: rgba(255, 42, 60, 0.45);
+  --accent: #ff4620;
+  --accent-2: #ff8a3c;
+  --accent-glow: rgba(255, 70, 32, 0.45);
 
   --f-display: 'Archivo Black', 'Arial Black', sans-serif;
   --f-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
@@ -913,7 +913,7 @@ h1, h2, h3, h4 {
   content: '';
   position: absolute;
   inset: 0;
-  border: 1px solid rgba(255, 42, 60, 0);
+  border: 1px solid rgba(255, 70, 32, 0);
   transition: border-color 0.4s var(--ease);
   pointer-events: none;
 }
@@ -1021,7 +1021,7 @@ h1, h2, h3, h4 {
 
 .review-controls button:hover {
   border-color: var(--accent);
-  background: rgba(255, 42, 60, 0.08);
+  background: rgba(255, 70, 32, 0.08);
 }
 
 /* ---------- pedidos / contacto ---------- */
