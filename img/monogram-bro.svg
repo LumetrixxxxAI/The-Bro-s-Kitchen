@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <circle cx="60" cy="60" r="58" stroke="#FF2A3C" stroke-width="2"/>
+  <circle cx="60" cy="60" r="47" stroke="#FF2A3C" stroke-width="1" stroke-dasharray="4 6" opacity="0.6"/>
+  <text x="60" y="74" text-anchor="middle" font-family="'Archivo Black', Arial, sans-serif" font-weight="900" font-size="38" fill="#FF2A3C">BRO</text>
+</svg>

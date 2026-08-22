@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The BRO's Kitchen — Asian Fusion &amp; Burgers en Estepona</title>
+<meta name="description" content="Comida asian fusion y burgers en Estepona, dentro de The Red Box. Bowls, wok, bao, kebab rolls y burgers urbanas. 4,8★ en Google. Come allí, para llevar o a domicilio.">
+<meta name="keywords" content="comida asian fusion Estepona, burgers Estepona, dónde comer Estepona, restaurante The Red Box Estepona, bao Estepona, wok Estepona">
+<link rel="canonical" href="https://thebroskitchen.es/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="The BRO's Kitchen — Asian Fusion & Burgers en Estepona">
+<meta property="og:description" content="Fusión de verdad. Del wok a la burger, sin frenos. Dentro de The Red Box, Estepona. 4,8★ en Google.">
+<meta property="og:image" content="img/og-image.jpg">
+<meta property="og:url" content="https://thebroskitchen.es/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The BRO's Kitchen — Asian Fusion & Burgers en Estepona">
+<meta name="twitter:description" content="Fusión de verdad. Del wok a la burger, sin frenos.">
+<meta name="twitter:image" content="img/og-image.jpg">
+
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "The BRO's Kitchen",
+  "image": "https://thebroskitchen.es/img/og-image.jpg",
+  "url": "https://thebroskitchen.es/",
+  "telephone": "+34610031291",
+  "servesCuisine": ["Asian Fusion", "Burgers", "Street Food"],
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "C.C. The Red Box, Local 11",
+    "addressLocality": "Estepona",
+    "addressRegion": "Málaga",
+    "postalCode": "29680",
+    "addressCountry": "ES"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "406"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "13:00",
+      "closes": "23:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/thebros.kitchen/",
+    "https://www.instagram.com/thebros.kitchen.estepona/"
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- grain texture -->
+<div class="grain"></div>
+
+<!-- custom cursor (desktop only) -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader-word" aria-hidden="true">
+    <span>T</span><span>H</span><span>E</span>&nbsp;<span>B</span><span>R</span><span>O</span><span>'</span><span>S</span>&nbsp;<span>K</span><span>I</span><span>T</span><span>C</span><span>H</span><span>E</span><span>N</span>
+  </div>
+  <div class="preloader-bar"><i id="preloaderFill"></i></div>
+</div>
+
+<!-- header -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="#" class="wordmark">THE BRO'S<span class="dot">.</span>KITCHEN</a>
+
+    <nav class="nav-links">
+      <a href="#especialidades">Especialidades</a>
+      <a href="#carta">Carta</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#galeria">Galería</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#ubicacion">Ubicación</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://www.ubereats.com/es" target="_blank" rel="noopener" class="btn btn-solid nav-cta">
+        <span>Pedir online</span>
+      </a>
+      <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav>
+    <a href="#especialidades">Especialidades</a>
+    <a href="#carta">Carta</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#galeria">Galería</a>
+    <a href="#opiniones">Opiniones</a>
+    <a href="#ubicacion">Ubicación</a>
+  </nav>
+  <a href="https://www.ubereats.com/es" target="_blank" rel="noopener" class="btn btn-solid">
+    <span>Pedir online</span>
+  </a>
+  <div class="mobile-menu-foot">
+    <span>+34 610 03 12 91</span>
+    <span>Estepona · The Red Box</span>
+  </div>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-media">
+      <img src="img/hero-local-neon-noche.svg" alt="The BRO's Kitchen de noche, neón en The Red Box, Estepona" id="heroImg">
+    </div>
+    <div class="container">
+      <div class="hero-badge">
+        <span class="star">★★★★★</span> 4,8 · +400 opiniones en Google
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title h-xl">
+          <span class="line"><span>ASIAN FUSION</span></span>
+          <span class="line"><span class="text-accent">&amp; BURGERS.</span></span>
+        </h1>
+        <div class="hero-bottom">
+          <p class="hero-sub">Fusión de verdad. Del wok a la burger, sin frenos. Cocina urbana en pleno The Red Box, Estepona.</p>
+          <div class="hero-actions">
+            <a href="https://www.ubereats.com/es" target="_blank" rel="noopener" class="btn btn-solid">
+              <span>Pedir online</span>
+            </a>
+            <a href="#carta" class="btn btn-outline">
+              <span>Ver la carta</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue"><div class="line-anim"></div>SCROLL</div>
+  </section>
+
+  <!-- ESPECIALIDADES -->
+  <section class="section" id="especialidades">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow"><span class="num">01</span> Especialidades</div>
+          <h2 class="h-lg reveal">LO QUE NO<br>TE PUEDES PERDER.</h2>
+        </div>
+        <p class="lede reveal">Cuatro platos que resumen la casa: fuego asiático, técnica de burger americana, cero postureo.</p>
+      </div>
+
+      <div class="specialties-grid">
+        <article class="specialty-card reveal">
+          <div class="specialty-media"><img src="img/especialidad-big-burger-bro.svg" alt="Big Burger BRO" loading="lazy"></div>
+          <div class="specialty-info">
+            <div>
+              <span class="specialty-tag">Firma de la casa</span>
+              <h3>BIG BURGER<br>BRO.</h3>
+            </div>
+            <span class="specialty-price">9,90 €</span>
+          </div>
+        </article>
+
+        <article class="specialty-card reveal">
+          <div class="specialty-media"><img src="img/especialidad-bowl-asian.svg" alt="Bowl asian fusion" loading="lazy"></div>
+          <div class="specialty-info">
+            <div>
+              <span class="specialty-tag">Bowl</span>
+              <h3>ASIAN<br>BOWL.</h3>
+            </div>
+            <span class="specialty-price">11,50 €</span>
+          </div>
+        </article>
+
+        <article class="specialty-card reveal">
+          <div class="specialty-media"><img src="img/especialidad-bao.svg" alt="Bao relleno" loading="lazy"></div>
+          <div class="specialty-info">
+            <div>
+              <span class="specialty-tag">Al vapor</span>
+              <h3>BAO<br>BUN.</h3>
+            </div>
+            <span class="specialty-price">4,50 €</span>
+          </div>
+        </article>
+
+        <article class="specialty-card reveal">
+          <div class="specialty-media"><img src="img/especialidad-wok.svg" alt="Wok de fideos" loading="lazy"></div>
+          <div class="specialty-info">
+            <div>
+              <span class="specialty-tag">Al wok</span>
+              <h3>NOODLES<br>WOK.</h3>
+            </div>
+            <span class="specialty-price">10,90 €</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARTA -->
+  <section class="section" id="carta">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow"><span class="num">02</span> La carta</div>
+          <h2 class="h-lg reveal">TODA LA CASA,<br>POR CATEGORÍAS.</h2>
+        </div>
+        <p class="lede reveal">Precios orientativos — consulta la carta completa y actualizada en el local o en Uber Eats.</p>
+      </div>
+
+      <p class="menu-note"><span>●</span> Opciones vegetarianas disponibles &nbsp;&nbsp; <span>●</span> Opciones sin gluten disponibles</p>
+
+      <div class="menu-categories">
+
+        <div class="menu-cat reveal">
+          <div class="menu-cat-media"><img src="img/carta-starters.svg" alt="Starters y alitas" loading="lazy"></div>
+          <div>
+            <div class="menu-cat-head">
+              <h3>Starters &amp; alitas</h3>
+              <span class="menu-cat-index">01 / 07</span>
+            </div>
+            <div class="menu-items">
+              <div class="menu-item">
+                <span class="menu-item-name">Alitas BRO</span>
+                <span class="menu-item-desc">Salsa a elegir: picante, teriyaki o BBQ</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">7,90 €</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-item-name">Gyozas</span>
+                <span class="menu-item-desc">De pollo o vegetales, salsa ponzu</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">6,90 €</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-item-name">Nachos asian</span>
+                <span class="menu-item-desc">Con toque picante y sriracha mayo</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">6,50 €</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-cat reveal">
+          <div class="menu-cat-media"><img src="img/carta-burgers.svg" alt="Burgers" loading="lazy"></div>
+          <div>
+            <div class="menu-cat-head">
+              <h3>Burgers</h3>
+              <span class="menu-cat-index">02 / 07</span>
+            </div>
+            <div class="menu-items">
+              <div class="menu-item">
+                <span class="menu-item-name">Big Burger BRO</span>
+                <span class="menu-item-desc">Doble carne, cheddar, salsa de la casa</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">9,90 €</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-item-name">Mini Burgers (2u)</span>
+                <span class="menu-item-desc">Para compartir, mismo sabor en pequeño</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">7,50 €</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-item-name">Crispy Chicken Burger</span>
+                <span class="menu-item-desc">Pollo crujiente, pepinillo, mayo picante</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">8,90 €</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-item-name">Veggie Burger</span>
+                <span class="menu-item-tags">V</span>
+                <span class="menu-item-desc">De garbanzo y especias asian</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">8,50 €</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-cat reveal">
+          <div class="menu-cat-media"><img src="img/carta-wraps.svg" alt="Wraps y kebab rolls" loading="lazy"></div>
+          <div>
+            <div class="menu-cat-head">
+              <h3>Wraps &amp; kebab rolls</h3>
+              <span class="menu-cat-index">03 / 07</span>
+            </div>
+            <div class="menu-items">
+              <div class="menu-item">
+                <span class="menu-item-name">Kebab Roll BRO</span>
+                <span class="menu-item-desc">Ternera especiada, salsa yogur</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">8,90 €</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-item-name">Wrap Teriyaki</span>
+                <span class="menu-item-desc">Pollo teriyaki, ensalada crujiente</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">7,90 €</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-cat reveal">
+          <div class="menu-cat-media"><img src="img/carta-bowls.svg" alt="Bowls y wok" loading="lazy"></div>
+          <div>
+            <div class="menu-cat-head">
+              <h3>Bowls &amp; wok</h3>
+              <span class="menu-cat-index">04 / 07</span>
+            </div>
+            <div class="menu-items">
+              <div class="menu-item">
+                <span class="menu-item-name">Asian Bowl</span>
+                <span class="menu-item-desc">Arroz, pollo, edamame, toppings de la casa</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">11,50 €</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-item-name">Noodles Wok</span>
+                <span class="menu-item-desc">Fideos salteados, verduras, salsa a elegir</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">10,90 €</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-item-name">Poke Bowl</span>
+                <span class="menu-item-tags">SG</span>
+                <span class="menu-item-desc">Salmón o tofu, aguacate, mango</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">12,50 €</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-cat reveal">
+          <div class="menu-cat-media"><img src="img/carta-curries.svg" alt="Curries y arroz" loading="lazy"></div>
+          <div>
+            <div class="menu-cat-head">
+              <h3>Curries &amp; rice</h3>
+              <span class="menu-cat-index">05 / 07</span>
+            </div>
+            <div class="menu-items">
+              <div class="menu-item">
+                <span class="menu-item-name">Curry Verde Thai</span>
+                <span class="menu-item-desc">Pollo o tofu, leche de coco, arroz jazmín</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">11,90 €</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-item-name">Katsu Curry</span>
+                <span class="menu-item-desc">Pollo empanado, salsa curry japonesa</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">12,50 €</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-cat reveal">
+          <div class="menu-cat-media"><img src="img/carta-bao.svg" alt="Bao" loading="lazy"></div>
+          <div>
+            <div class="menu-cat-head">
+              <h3>Bao</h3>
+              <span class="menu-cat-index">06 / 07</span>
+            </div>
+            <div class="menu-items">
+              <div class="menu-item">
+                <span class="menu-item-name">Bao de Panceta</span>
+                <span class="menu-item-desc">Panceta glaseada, pepino, cacahuete</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">4,90 €</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-item-name">Bao Vegano</span>
+                <span class="menu-item-tags">V</span>
+                <span class="menu-item-desc">Seitán picante, col lombarda</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">4,50 €</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-cat reveal">
+          <div class="menu-cat-media"><img src="img/carta-postres.svg" alt="Postres" loading="lazy"></div>
+          <div>
+            <div class="menu-cat-head">
+              <h3>Postres</h3>
+              <span class="menu-cat-index">07 / 07</span>
+            </div>
+            <div class="menu-items">
+              <div class="menu-item">
+                <span class="menu-item-name">Cheesecake Matcha</span>
+                <span class="menu-item-desc">Con base crujiente y té verde</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">5,50 €</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-item-name">Mochi (3u)</span>
+                <span class="menu-item-tags">SG</span>
+                <span class="menu-item-desc">Sabores de temporada</span>
+                <span class="menu-item-leader"></span>
+                <span class="menu-item-price">5,90 €</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="menu-cta">
+        <a href="https://www.ubereats.com/es" target="_blank" rel="noopener" class="btn btn-outline">
+          <span>Ver carta completa</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="section" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="eyebrow"><span class="num">03</span> Nosotros</div>
+          <h2 class="h-lg reveal" style="margin-bottom:28px;">FUSIÓN URBANA,<br>SIN ETIQUETAS.</h2>
+          <p class="reveal"><strong>The BRO's Kitchen</strong> nace de una idea simple: mezclar la calle de Asia con la calle americana y que el resultado sepa de verdad. Nada de conceptos a medias — wok, burger, bao y kebab conviven en la misma carta porque comparten lo importante: producto bueno, fuego fuerte y cero postureo.</p>
+          <p class="reveal">Dentro de The Red Box, en Estepona, servimos rápido pero sin atajos. En terraza, para llevar o a domicilio — mismo nivel, siempre. Ambiente urbano, familiar y con energía desde que se abren las puertas.</p>
+
+          <div class="stats-row">
+            <div class="stat reveal">
+              <span class="stat-num" data-count="4.8" data-decimals="1">0</span>
+              <span class="stat-label">Valoración Google</span>
+            </div>
+            <div class="stat reveal">
+              <span class="stat-num" data-count="406">0</span>
+              <span class="stat-label">Opiniones</span>
+            </div>
+            <div class="stat reveal">
+              <span class="stat-num" data-count="30">0</span>
+              <span class="stat-label">Platos en carta</span>
+            </div>
+            <div class="stat reveal">
+              <span class="stat-num" data-count="7">0</span>
+              <span class="stat-label">Días a la semana</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-media reveal">
+          <img src="img/nosotros-local.svg" alt="Interior de The BRO's Kitchen en Estepona" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="section" id="galeria">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow"><span class="num">04</span> Galería</div>
+          <h2 class="h-lg reveal">SE COME<br>CON LOS OJOS.</h2>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal"><img src="img/galeria-1.svg" alt="The BRO's Kitchen — plato" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/galeria-2.svg" alt="The BRO's Kitchen — plato" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/galeria-3.svg" alt="The BRO's Kitchen — local" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/galeria-4.svg" alt="The BRO's Kitchen — plato" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/galeria-5.svg" alt="The BRO's Kitchen — local" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="img/galeria-6.svg" alt="The BRO's Kitchen — plato" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPINIONES -->
+  <section class="section" id="opiniones">
+    <div class="container">
+      <div class="eyebrow"><span class="num">05</span> Opiniones</div>
+      <div class="reviews-wrap">
+        <div class="reviews-rating reveal">
+          <span class="big-num">4,8</span>
+          <span class="reviews-stars">★★★★★</span>
+          <span class="reviews-count">Basado en 406 opiniones de Google</span>
+          <a href="https://www.google.com/search?q=The+BRO%27s+Kitchen+Estepona" target="_blank" rel="noopener" class="reviews-link">Ver todas en Google →</a>
+        </div>
+
+        <div class="review-carousel reveal">
+          <div class="review-track" id="reviewTrack">
+            <div class="review-card">
+              <p class="review-quote">"Sitio brutal dentro de The Red Box. La Big Burger BRO no tiene rival y el bao se deshace en la boca. Repetiremos seguro."</p>
+              <div class="review-meta"><span>— Cliente Google</span><span class="stars">★★★★★</span></div>
+            </div>
+            <div class="review-card">
+              <p class="review-quote">"Raciones generosas y sabor de verdad, se nota que cuidan el producto. El trato del equipo es cercano y rápido incluso a tope de gente."</p>
+              <div class="review-meta"><span>— Cliente Google</span><span class="stars">★★★★★</span></div>
+            </div>
+            <div class="review-card">
+              <p class="review-quote">"La mezcla asian-burger suena rara hasta que lo pruebas. El wok de noodles y el poke bowl, de lo mejor que hemos comido en Estepona."</p>
+              <div class="review-meta"><span>— Cliente Google</span><span class="stars">★★★★★</span></div>
+            </div>
+          </div>
+          <div class="review-controls">
+            <button id="reviewPrev" aria-label="Opinión anterior">←</button>
+            <button id="reviewNext" aria-label="Opinión siguiente">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEDIDOS Y CONTACTO -->
+  <section class="section" id="pedidos">
+    <div class="container">
+      <div class="eyebrow"><span class="num">06</span> Pedidos &amp; contacto</div>
+      <h2 class="h-lg reveal" style="margin-bottom:50px;">COME AQUÍ,<br>LLÉVATELO O PÍDELO.</h2>
+
+      <div class="order-grid">
+        <a href="https://www.ubereats.com/es" target="_blank" rel="noopener" class="order-card reveal">
+          <div class="order-top">
+            <span class="order-tag">A domicilio</span>
+            <span class="order-arrow">↗</span>
+          </div>
+          <h3>UBER<br>EATS</h3>
+        </a>
+        <a href="https://www.thefork.es/" target="_blank" rel="noopener" class="order-card reveal">
+          <div class="order-top">
+            <span class="order-tag">Reservar mesa</span>
+            <span class="order-arrow">↗</span>
+          </div>
+          <h3>THE<br>FORK</h3>
+        </a>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-links">
+          <a href="tel:+34610031291">📞 610 03 12 91</a>
+          <a href="https://wa.me/34610031291" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a href="https://www.instagram.com/thebros.kitchen.estepona/" target="_blank" rel="noopener">@thebros.kitchen.estepona</a>
+        </div>
+        <div class="service-tags">
+          <span>Comer allí</span>
+          <span>Para llevar</span>
+          <span>A domicilio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UBICACION -->
+  <section class="section" id="ubicacion">
+    <div class="container">
+      <div class="eyebrow"><span class="num">07</span> Ubicación</div>
+      <div class="location-grid">
+        <div class="location-info">
+          <h2 class="h-lg reveal">TE ESPERAMOS<br>EN THE RED BOX.</h2>
+          <dl>
+            <div class="reveal">
+              <dt>Dirección</dt>
+              <dd>C.C. The Red Box, Local 11<br>29680 Estepona (Málaga)</dd>
+            </div>
+            <div class="reveal">
+              <dt>Horario</dt>
+              <dd>Todos los días · 13:00 – 23:00<br><span class="text-grey" style="font-size:13px;">(confirmar horario exacto)</span></dd>
+            </div>
+            <div class="reveal">
+              <dt>Teléfono</dt>
+              <dd><a href="tel:+34610031291" style="border-bottom:1px solid var(--accent);">610 03 12 91</a></dd>
+            </div>
+          </dl>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=C.C.+The+Red+Box+Local+11+29680+Estepona" target="_blank" rel="noopener" class="btn btn-solid reveal">
+            <span>Cómo llegar</span>
+          </a>
+        </div>
+        <div class="map-frame reveal">
+          <iframe
+            src="https://www.google.com/maps?q=C.C.+The+Red+Box+Estepona+M%C3%A1laga&output=embed"
+            title="Mapa de ubicación de The BRO's Kitchen en The Red Box, Estepona"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="img/monogram-bro.svg" alt="Monograma BRO">
+        <p>Asian fusion &amp; burgers dentro de The Red Box, Estepona. Fusión de verdad, del wok a la burger, sin frenos.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#especialidades">Especialidades</a></li>
+          <li><a href="#carta">Carta</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#galeria">Galería</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Pedidos</h4>
+        <ul>
+          <li><a href="https://www.ubereats.com/es" target="_blank" rel="noopener">Uber Eats</a></li>
+          <li><a href="https://www.thefork.es/" target="_blank" rel="noopener">TheFork</a></li>
+          <li><a href="#opiniones">Opiniones</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+34610031291">610 03 12 91</a></li>
+          <li><a href="https://wa.me/34610031291" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/thebros.kitchen.estepona/" target="_blank" rel="noopener">Instagram Estepona</a></li>
+          <li><a href="https://www.instagram.com/thebros.kitchen/" target="_blank" rel="noopener">Instagram BRO's Kitchen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> The BRO's Kitchen — C.C. The Red Box, Estepona</span>
+      <span style="display:flex; gap:20px;">
+        <a href="legal/aviso-legal.html">Aviso legal</a>
+        <a href="legal/privacidad.html">Privacidad</a>
+        <a href="legal/cookies.html">Cookies</a>
+      </span>
+      <span>Diseñado por Lumetrix</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp float -->
+<a href="https://wa.me/34610031291" target="_blank" rel="noopener" class="wa-float" aria-label="Escríbenos por WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2c-5.523 0-10 4.477-10 10 0 1.77.463 3.492 1.34 5.008L2 22l5.117-1.334A9.958 9.958 0 0 0 12.004 22c5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 18.181a8.16 8.16 0 0 1-4.16-1.14l-.298-.177-3.037.792.812-2.96-.194-.304a8.15 8.15 0 0 1-1.264-4.392c0-4.507 3.667-8.174 8.174-8.174s8.173 3.667 8.173 8.174-3.666 8.181-8.206 8.181z"/></svg>
+</a>
+
+<!-- cookie banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>Usamos cookies propias y de terceros para mejorar tu experiencia. Puedes leer más en nuestra <a href="legal/cookies.html">política de cookies</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-outline" id="cookieReject"><span>Rechazar</span></button>
+    <button class="btn btn-solid" id="cookieAccept"><span>Aceptar</span></button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
