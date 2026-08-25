@@ -69,6 +69,9 @@
 </head>
 <body>
 
+<!-- scroll progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
 <!-- preloader -->
 <div class="preloader" id="preloader">
   <div class="preloader-word" aria-hidden="true">
@@ -154,8 +157,17 @@
     </div>
   </section>
 
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>★ 4,8 en Google</span><span>Asian fusion</span><span>Burgers urbanas</span><span>The Red Box · Estepona</span><span>Del wok a la burger</span>
+      <span>★ 4,8 en Google</span><span>Asian fusion</span><span>Burgers urbanas</span><span>The Red Box · Estepona</span><span>Del wok a la burger</span>
+    </div>
+  </div>
+
   <!-- ESPECIALIDADES -->
   <section class="section" id="especialidades">
+    <span class="section-mark" aria-hidden="true">01</span>
     <div class="container">
       <div class="section-head">
         <div>
@@ -166,7 +178,7 @@
       </div>
 
       <div class="specialties-grid">
-        <article class="specialty-card reveal">
+        <article class="specialty-card card-reveal">
           <div class="specialty-media"><img src="img/especialidad-bao-bun.webp" alt="Bao de panceta con brotes y cebolla morada" loading="lazy"></div>
           <div class="specialty-info">
             <div>
@@ -177,7 +189,7 @@
           </div>
         </article>
 
-        <article class="specialty-card reveal">
+        <article class="specialty-card card-reveal">
           <div class="specialty-media"><img src="img/especialidad-crispy-prawns.webp" alt="Crispy prawns con salsa de la casa" loading="lazy"></div>
           <div class="specialty-info">
             <div>
@@ -188,7 +200,7 @@
           </div>
         </article>
 
-        <article class="specialty-card reveal">
+        <article class="specialty-card card-reveal">
           <div class="specialty-media"><img src="img/especialidad-pad-thai-wok.webp" alt="Pad Thai al wok con verduras" loading="lazy"></div>
           <div class="specialty-info">
             <div>
@@ -199,7 +211,7 @@
           </div>
         </article>
 
-        <article class="specialty-card reveal">
+        <article class="specialty-card card-reveal">
           <div class="specialty-media"><img src="img/especialidad-teriyaki-gyoza.webp" alt="Pollo teriyaki y gyozas para compartir" loading="lazy"></div>
           <div class="specialty-info">
             <div>
@@ -210,7 +222,7 @@
           </div>
         </article>
 
-        <article class="specialty-card reveal">
+        <article class="specialty-card card-reveal">
           <div class="specialty-media"><img src="img/carta-bowls.webp" alt="Asian Bowl con arroz, pollo y edamame" loading="lazy"></div>
           <div class="specialty-info">
             <div>
@@ -221,7 +233,7 @@
           </div>
         </article>
 
-        <article class="specialty-card reveal">
+        <article class="specialty-card card-reveal">
           <div class="specialty-media"><img src="img/carta-postres.webp" alt="Brownie caliente con helado de vainilla" loading="lazy"></div>
           <div class="specialty-info">
             <div>
@@ -237,13 +249,14 @@
 
   <!-- CARTA -->
   <section class="section" id="carta">
+    <span class="section-mark" aria-hidden="true">02</span>
     <div class="container">
       <div class="section-head">
         <div>
           <div class="eyebrow"><span class="num">02</span> La carta</div>
           <h2 class="h-lg reveal">Toda la casa, por categorías.</h2>
         </div>
-        <p class="lede reveal">Precios orientativos — consulta la carta completa y actualizada en el local o en Uber Eats.</p>
+        <p class="lede reveal">Precios orientativos — consulta la carta completa y actualizada en el local o al pedir online.</p>
       </div>
 
       <p class="menu-note"><span>●</span> Opciones vegetarianas disponibles &nbsp;&nbsp; <span>●</span> Opciones sin gluten disponibles</p>
@@ -476,6 +489,7 @@
 
   <!-- NOSOTROS -->
   <section class="section" id="nosotros">
+    <span class="section-mark" aria-hidden="true">03</span>
     <div class="container">
       <div class="about-grid">
         <div class="about-text">
@@ -513,6 +527,7 @@
 
   <!-- GALERIA -->
   <section class="section" id="galeria">
+    <span class="section-mark" aria-hidden="true">04</span>
     <div class="container">
       <div class="section-head">
         <div>
@@ -522,18 +537,19 @@
       </div>
 
       <div class="gallery-grid">
-        <div class="gallery-item reveal"><img src="img/galeria-1.webp" alt="Selección de starters: edamame, gyozas, alitas y crispy prawns" loading="lazy"></div>
-        <div class="gallery-item reveal"><img src="img/galeria-2.webp" alt="Croquetas crujientes con salsa de la casa" loading="lazy"></div>
-        <div class="gallery-item reveal"><img src="img/galeria-3.webp" alt="Panceta glaseada al estilo asiático" loading="lazy"></div>
-        <div class="gallery-item reveal"><img src="img/galeria-4.webp" alt="Rincón interior de The BRO's Kitchen" loading="lazy"></div>
-        <div class="gallery-item reveal"><img src="img/galeria-5.webp" alt="Fachada de The BRO's Kitchen en The Red Box, de día" loading="lazy"></div>
-        <div class="gallery-item reveal"><img src="img/galeria-6.webp" alt="Zumos y batidos naturales de la casa" loading="lazy"></div>
+        <div class="gallery-item card-reveal"><img src="img/galeria-1.webp" alt="Selección de starters: edamame, gyozas, alitas y crispy prawns" loading="lazy"></div>
+        <div class="gallery-item card-reveal"><img src="img/galeria-2.webp" alt="Croquetas crujientes con salsa de la casa" loading="lazy"></div>
+        <div class="gallery-item card-reveal"><img src="img/galeria-3.webp" alt="Panceta glaseada al estilo asiático" loading="lazy"></div>
+        <div class="gallery-item card-reveal"><img src="img/galeria-4.webp" alt="Rincón interior de The BRO's Kitchen" loading="lazy"></div>
+        <div class="gallery-item card-reveal"><img src="img/galeria-5.webp" alt="Fachada de The BRO's Kitchen en The Red Box, de día" loading="lazy"></div>
+        <div class="gallery-item card-reveal"><img src="img/galeria-6.webp" alt="Zumos y batidos naturales de la casa" loading="lazy"></div>
       </div>
     </div>
   </section>
 
   <!-- OPINIONES -->
   <section class="section" id="opiniones">
+    <span class="section-mark" aria-hidden="true">05</span>
     <div class="container">
       <div class="eyebrow"><span class="num">05</span> Opiniones</div>
       <div class="reviews-wrap">
@@ -574,6 +590,7 @@
 
   <!-- PEDIDOS Y CONTACTO -->
   <section class="section" id="pedidos">
+    <span class="section-mark" aria-hidden="true">06</span>
     <div class="container">
       <div class="eyebrow"><span class="num">06</span> Pedidos &amp; contacto</div>
       <h2 class="h-lg reveal" style="margin-bottom:50px;">Come aquí, llévatelo o pídelo.</h2>
@@ -612,6 +629,7 @@
 
   <!-- UBICACION -->
   <section class="section" id="ubicacion">
+    <span class="section-mark" aria-hidden="true">07</span>
     <div class="container">
       <div class="eyebrow"><span class="num">07</span> Ubicación</div>
       <div class="location-grid">
@@ -703,6 +721,9 @@
     </div>
   </div>
 </footer>
+
+<!-- back to top -->
+<a href="#hero" class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</a>
 
 <!-- WhatsApp float -->
 <a href="https://wa.me/34610031291" target="_blank" rel="noopener" class="wa-float" aria-label="Escríbenos por WhatsApp">

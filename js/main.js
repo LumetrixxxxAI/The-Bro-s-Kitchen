@@ -52,6 +52,31 @@
     }
   });
 
+  /* ---------------- scroll progress bar ---------------- */
+  (function scrollProgress() {
+    var bar = document.getElementById('scrollProgress');
+    if (!bar) return;
+    ScrollTrigger.create({
+      start: 0,
+      end: 'max',
+      onUpdate: function (self) {
+        bar.style.width = (self.progress * 100) + '%';
+      }
+    });
+  })();
+
+  /* ---------------- back to top ---------------- */
+  (function backToTop() {
+    var btn = document.getElementById('backToTop');
+    if (!btn) return;
+    ScrollTrigger.create({
+      start: 'top -700',
+      onUpdate: function (self) {
+        btn.classList.toggle('is-visible', self.scroll() > 700);
+      }
+    });
+  })();
+
   /* ---------------- mobile menu ---------------- */
   (function mobileMenu() {
     var burger = document.getElementById('burgerBtn');
@@ -89,10 +114,81 @@
     });
   }
 
+  /* ---------------- card reveals (clip-path curtain + stagger) ---------------- */
+  function setupCardReveals() {
+    ScrollTrigger.batch('.card-reveal', {
+      start: 'top 88%',
+      onEnter: function (batch) {
+        gsap.to(batch, {
+          opacity: 1,
+          clipPath: 'inset(0 0 0% 0)',
+          duration: 0.9,
+          ease: 'power3.out',
+          stagger: 0.1,
+          overwrite: true
+        });
+      }
+    });
+  }
+
   if (reduceMotion) {
-    document.querySelectorAll('.reveal').forEach(function (el) { el.style.opacity = 1; });
+    document.querySelectorAll('.reveal, .card-reveal').forEach(function (el) {
+      el.style.opacity = 1;
+      el.style.clipPath = 'none';
+    });
   } else {
     setupReveals();
+    setupCardReveals();
+  }
+
+  /* ---------------- hero media parallax ---------------- */
+  if (!reduceMotion) {
+    gsap.to('.hero-media', {
+      y: 34,
+      ease: 'none',
+      scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
+    });
+  }
+
+  /* ---------------- section watermark parallax ---------------- */
+  if (!reduceMotion) {
+    gsap.utils.toArray('.section-mark').forEach(function (mark) {
+      gsap.to(mark, {
+        y: -50,
+        ease: 'none',
+        scrollTrigger: { trigger: mark.parentElement, start: 'top bottom', end: 'bottom top', scrub: true }
+      });
+    });
+  }
+
+  /* ---------------- card tilt on hover (desktop only) ---------------- */
+  if (!reduceMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    (function tilt() {
+      function addTilt(selector, maxTilt, lift) {
+        document.querySelectorAll(selector).forEach(function (card) {
+          card.addEventListener('mouseenter', function () {
+            gsap.to(card, { y: -lift, duration: 0.4, ease: 'power2.out' });
+          });
+          card.addEventListener('mousemove', function (e) {
+            var r = card.getBoundingClientRect();
+            var px = (e.clientX - r.left) / r.width - 0.5;
+            var py = (e.clientY - r.top) / r.height - 0.5;
+            gsap.to(card, {
+              rotateX: -py * maxTilt,
+              rotateY: px * maxTilt,
+              transformPerspective: 700,
+              duration: 0.4,
+              ease: 'power2.out'
+            });
+          });
+          card.addEventListener('mouseleave', function () {
+            gsap.to(card, { rotateX: 0, rotateY: 0, y: 0, duration: 0.6, ease: 'power3.out' });
+          });
+        });
+      }
+      addTilt('.specialty-card', 5, 6);
+      addTilt('.order-card', 3, 5);
+    })();
   }
 
   /* ---------------- animated counters ---------------- */
