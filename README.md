@@ -41,7 +41,6 @@ Para sustituirlas, guarda la foto real con el **mismo nombre de archivo** (cambi
 
 - **Uber Eats** y **TheFork**: los botones apuntan a las páginas genéricas (`ubereats.com/es`, `thefork.es`) — sustituir por el enlace directo a la página del restaurante en cada plataforma.
 - **Teléfono**: se usa `610 03 12 91` como principal en todos los enlaces `tel:` y `wa.me`. Confirmar si `951 698 465` debe añadirse o sustituirlo.
-- **Horario**: se muestra "Todos los días · 13:00–23:00" marcado como "a confirmar" — actualizar con el horario real (días y hora de apertura).
 - **Aviso legal**: la plantilla en `legal/aviso-legal.html` necesita el nombre fiscal/NIF exacto del negocio.
 
 ## Publicar con GitHub Pages
