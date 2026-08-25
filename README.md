@@ -9,8 +9,8 @@ HTML, CSS y JS puros — sin build, sin dependencias de instalación. Se puede s
 ```
 index.html              página principal
 css/style.css           estilos (paleta, tipografía, layout, responsive)
-js/main.js               preloader, cursor, header, menú móvil, animaciones GSAP, contadores, carrusel, cookies
-img/                     imágenes (placeholders marcados — ver "Fotos pendientes")
+js/main.js               preloader, header, menú móvil, animaciones GSAP, contadores, carrusel, cookies
+img/                     imágenes (ver "Fotos" más abajo)
 legal/aviso-legal.html   aviso legal
 legal/privacidad.html    política de privacidad
 legal/cookies.html       política de cookies
@@ -21,7 +21,7 @@ legal/cookies.html       política de cookies
 - HTML5 semántico + Schema.org (`Restaurant`) para SEO local.
 - CSS puro con custom properties (sin frameworks).
 - [GSAP](https://gsap.com/) + ScrollTrigger vía CDN para animaciones (reveals, parallax, contadores).
-- Google Fonts: Archivo Black (titulares), Inter (texto), Space Grotesk (detalles/mono).
+- Google Fonts: Fraunces (titulares serif), Inter (texto), Space Grotesk (detalles/mono).
 - Sin frameworks JS, sin paso de build.
 
 ## Fotos

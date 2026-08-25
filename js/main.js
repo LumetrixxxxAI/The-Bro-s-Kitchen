@@ -12,7 +12,7 @@
     var letters = pre.querySelectorAll('.preloader-word span');
     var heroLine = document.querySelectorAll('.hero-title .line span');
     var heroBadge = document.querySelector('.hero-badge');
-    var heroSub = document.querySelector('.hero-bottom');
+    var heroSub = document.querySelector('.hero-foot');
 
     document.body.classList.add('no-scroll');
 
@@ -42,34 +42,6 @@
     window.addEventListener('load', runPreloader);
     setTimeout(runPreloader, 2500); // fallback in case load fires late
   }
-
-  /* ---------------- custom cursor ---------------- */
-  (function cursor() {
-    if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
-    var dot = document.getElementById('cursorDot');
-    var ring = document.getElementById('cursorRing');
-    var mx = 0, my = 0, rx = 0, ry = 0;
-
-    window.addEventListener('mousemove', function (e) {
-      mx = e.clientX; my = e.clientY;
-      dot.style.left = mx + 'px';
-      dot.style.top = my + 'px';
-    });
-
-    function loop() {
-      rx += (mx - rx) * 0.16;
-      ry += (my - ry) * 0.16;
-      ring.style.left = rx + 'px';
-      ring.style.top = ry + 'px';
-      requestAnimationFrame(loop);
-    }
-    loop();
-
-    document.querySelectorAll('a, button, .specialty-card, .gallery-item, .order-card').forEach(function (el) {
-      el.addEventListener('mouseenter', function () { ring.classList.add('is-active'); });
-      el.addEventListener('mouseleave', function () { ring.classList.remove('is-active'); });
-    });
-  })();
 
   /* ---------------- header on scroll ---------------- */
   var header = document.getElementById('siteHeader');
@@ -121,15 +93,6 @@
     document.querySelectorAll('.reveal').forEach(function (el) { el.style.opacity = 1; });
   } else {
     setupReveals();
-  }
-
-  /* ---------------- hero parallax ---------------- */
-  if (!reduceMotion) {
-    gsap.to('#heroImg', {
-      y: 28,
-      ease: 'none',
-      scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
-    });
   }
 
   /* ---------------- animated counters ---------------- */
