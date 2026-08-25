@@ -117,28 +117,39 @@
     });
   });
 
-  /* ---------------- reviews carousel ---------------- */
+  /* ---------------- reviews carousel (autoplay only, no manual scroll) ---------------- */
   (function reviews() {
     var track = document.getElementById('reviewTrack');
     var cards = track.children;
-    var prev = document.getElementById('reviewPrev');
-    var next = document.getElementById('reviewNext');
+    var dots = document.querySelectorAll('#reviewDots .review-dot');
     var i = 0;
     var total = cards.length;
     var timer;
+    var DURATION = 5000;
+
+    function setDots() {
+      dots.forEach(function (dot, idx) {
+        dot.classList.toggle('is-active', idx === i);
+        dot.classList.toggle('is-done', idx < i);
+      });
+    }
 
     function go(n) {
       i = (n + total) % total;
-      gsap.to(track, { xPercent: -100 * i, duration: 0.6, ease: 'power3.inOut' });
+      gsap.to(track, { xPercent: -100 * i, duration: 0.7, ease: 'power3.inOut' });
+      setDots();
     }
 
     function auto() {
       clearInterval(timer);
-      timer = setInterval(function () { go(i + 1); }, 6000);
+      timer = setInterval(function () { go(i + 1); }, DURATION);
     }
 
-    next.addEventListener('click', function () { go(i + 1); auto(); });
-    prev.addEventListener('click', function () { go(i - 1); auto(); });
+    dots.forEach(function (dot, idx) {
+      dot.addEventListener('click', function () { go(idx); auto(); });
+    });
+
+    go(0);
     auto();
   })();
 
